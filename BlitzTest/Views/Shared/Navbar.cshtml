@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Navbar2";
+}
+
+<nav class="navbar navbar-light bg-light shadow p-3 mb-5 bg-body rounded">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold">Blitz</a>
+
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+        <div class="d-flex me-2">
+            <a class="nav-link text-dark" asp-area="" asp-controller="LogIn" asp-action="LogIn">
+                <button class="btn btn-primary me-2" type="submit" id="btnLogin">
+                    <i class="bi bi-person me-2"></i>Login
+                </button>
+            </a>
+
+            <a class="nav-link text-dark" asp-area="" asp-controller="LogIn" asp-action="LogIn">
+                <button class="btn btn-outline-primary" type="submit" id="btnCart">
+                    <i class="bi bi-cart3 me-2"></i>Cart
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
