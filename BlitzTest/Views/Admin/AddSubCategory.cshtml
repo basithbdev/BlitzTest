@@ -3,7 +3,6 @@
     ViewData["Title"] = "Blitz - Admin";
     Layout = "AdminNavbar";
 }
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <title>Blitz Admin</title>
 </head>
@@ -31,16 +30,20 @@
 
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu_item1">
-                                <i class="bi bi-box-seam me-2"></i>Product Management <i class="bi bi-caret-down-fill"></i>
+                                <i class="bi bi-box-seam me-2"></i>Product Management <i
+                                    class="bi bi-caret-down-fill"></i>
                             </a>
                             <ul id="menu_item1" class="submenu" data-bs-parent="#nav_accordion">
                                 <li>
-                                    <a class="nav-link active text-decoration-none" asp-area="" asp-controller="Admin" asp-action="AddCategory">
+                                    <a class="nav-link text-decoration-none" asp-area="" asp-controller="Admin"
+                                        asp-action="AddCategory">
                                         <i class="bi bi-tag me-2"></i>Category
                                     </a>
                                 </li>
-                                <li><a class="nav-link" asp-area="" asp-controller="Admin" asp-action="AddSubCategory"><i class="bi bi-tags me-2"></i>Sub Category</a></li>
-                                <li><a class="nav-link" asp-area="" asp-controller="Admin" asp-action="AddProduct"><i class="bi bi-box me-2"></i>Product</a></li>
+                                <li><a class="nav-link active" asp-area="" asp-controller="Admin"
+                                        asp-action="AddSubCategory"><i class="bi bi-tags me-2"></i>Sub-Category</a></li>
+                                <li><a class="nav-link" asp-area="" asp-controller="Admin" asp-action="AddProduct"><i
+                                            class="bi bi-box me-2"></i>Product</a></li>
                             </ul>
                         </li>
 
@@ -59,19 +62,19 @@
 
             <main class="col-lg-9 p-4 ms-1">
                 <div class="shadow p-3 mb-5 bg-body rounded">
-                    <h3 class="fw-bold mb-4">Category Management</h3>
+                    <h3 class="fw-bold mb-4">Sub-Category Management</h3>
 
                     <a class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                       role="button"><i class="bi bi-tag me-2"></i> Add Category</a>
+                        role="button"><i class="bi bi-tag me-2"></i> Add Sub-Category</a>
                     <div class="card">
                         <table class="table mb-0 table-hover">
 
                             <thead>
                                 <tr>
                                     <th>Sl. No.</th>
-                                    <th scope="col">Category ID</th>
+                                    <th scope="col">Sub Category ID</th>
+                                    <th scope="col">Sub Category Name</th>
                                     <th scope="col">Category Name</th>
-                                    <th scope="col">Category Type</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
@@ -107,7 +110,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Sub-Category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -115,15 +118,19 @@
                     <form action="" method="POST">
                         <div class="row g-3 mb-3">
                             <div class="col">
-                                <label for="inputCategoryNameLabel" class="form-label">Category Name</label>
+                                <label for="inputSubCategoryNameLabel" class="form-label">Sub-Category Name</label>
                                 <input type="text" class="form-control" id="inputCategoryName" name="inputCategoryName"
-                                       required>
+                                    required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="inputCategoryTypeLabel" class="form-label">Category Type</label>
-                            <input type="text" class="form-control" id="inputCategoryType" name="inputCategoryType"
-                                   required>
+                            <label for="selectCategoryNameLabel" class="form-label">Category Name</label>
+
+                            <select class="form-select" name="selectCategoryName" id="selectCategoryName" required>
+                                <option selected>Select Category</option>
+                                <option value="inputCategoryName">Category Name</option>
+                            </select>
+
                         </div>
 
                         <button type="submit" class="btn btn-primary w-100 mb-3">Add</button>
@@ -134,9 +141,10 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </body>
 
 </html>
+
