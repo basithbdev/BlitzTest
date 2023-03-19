@@ -24,7 +24,7 @@ namespace BlitzTest.Controllers
             return View();
         }
 
-        public IActionResult ManageOrders()
+        public IActionResult ViewOrders()
         {
             return View();
         }
