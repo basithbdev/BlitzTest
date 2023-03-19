@@ -35,17 +35,17 @@
                             </a>
                             <ul id="menu_item1" class="submenu" data-bs-parent="#nav_accordion">
                                 <li>
-                                    <a class="nav-link active text-decoration-none" href="">
+                                    <a class="nav-link active text-decoration-none" asp-area="" asp-controller="Admin" asp-action="AddCategory">
                                         <i class="bi bi-tag me-2"></i>Category
                                     </a>
                                 </li>
-                                <li><a class="nav-link" href=""><i class="bi bi-tags me-2"></i>Sub Category</a></li>
-                                <li><a class="nav-link" href=""><i class="bi bi-box me-2"></i>Product</a></li>
+                                <li><a class="nav-link" asp-area="" asp-controller="Admin" asp-action="AddSubCategory"><i class="bi bi-tags me-2"></i>Sub Category</a></li>
+                                <li><a class="nav-link" asp-area="" asp-controller="Admin" asp-action="AddProduct"><i class="bi bi-box me-2"></i>Product</a></li>
                             </ul>
                         </li>
 
                         <li>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="ManageOrders">
                                 <i class="bi bi-receipt me-2"></i>All
                                 Orders
                             </a>
@@ -90,10 +90,6 @@
 
                                         <a class="btn btn-danger btn-sm mb-1" href="" role="button">
                                             Remove <i class="bi bi-trash"></i>
-                                        </a>
-
-                                        <a class="btn btn-success btn-sm mb-1" href="" role="button">
-                                            Activate <i class="bi bi-check2"></i>
                                         </a>
                                     </td>
                                 </tr>
