@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewData["Title"] = "Blitz - Admin";
+    Layout = "AdminNavbar";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <title>Blitz Admin</title>
+</head>
+
+<body>
+    <section class="section-content overflow-hidden controlpanel-main ps-5 ps-lg-0">
+        <div class="row">
+            <!-- Sidebar -->
+            <aside class="col-sm-2 shadow pt-3 pe-3 mb-5 bg-body rounded" style="width: 240px;">
+
+                <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 220px;">
+                    <h4 class="text-center fw-bold">Admin Panel</h4>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu_item1">
+                                <i class="bi bi-box-seam me-2"></i>Product Management <i class="bi bi-caret-down-fill"></i>
+                            </a>
+                            <ul id="menu_item1" class="submenu" data-bs-parent="#nav_accordion">
+                                <li>
+                                    <a class="nav-link active text-decoration-none" href="">
+                                        <i class="bi bi-tag me-2"></i>Category
+                                    </a>
+                                </li>
+                                <li><a class="nav-link" href=""><i class="bi bi-tags me-2"></i>Sub Category</a></li>
+                                <li><a class="nav-link" href=""><i class="bi bi-box me-2"></i>Product</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="nav-link" href="">
+                                <i class="bi bi-receipt me-2"></i>All
+                                Orders
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Sidebar End -->
+
+            <main class="col-lg-9 p-4 ms-1">
+                <div class="shadow p-3 mb-5 bg-body rounded">
+                    <h3 class="fw-bold mb-4">Category Management</h3>
+
+                    <a class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                       role="button"><i class="bi bi-tag me-2"></i> Add Category</a>
+                    <div class="card">
+                        <table class="table mb-0 table-hover">
+
+                            <thead>
+                                <tr>
+                                    <th>Sl. No.</th>
+                                    <th scope="col">Category ID</th>
+                                    <th scope="col">Category Name</th>
+                                    <th scope="col">Category Type</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td style="width: 220px;"></td>
+                                    <td style="width: 220px;"></td>
+                                    <td>
+                                        <a class="btn btn-primary btn-sm mb-1" href="" role="button">
+                                            Show
+                                            More / Edit <i class="bi bi-chevron-right"></i>
+                                        </a>
+
+                                        <a class="btn btn-danger btn-sm mb-1" href="" role="button">
+                                            Remove <i class="bi bi-trash"></i>
+                                        </a>
+
+                                        <a class="btn btn-success btn-sm mb-1" href="" role="button">
+                                            Activate <i class="bi bi-check2"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="" method="POST">
+                        <div class="row g-3 mb-3">
+                            <div class="col">
+                                <label for="inputCategoryNameLabel" class="form-label">Category Name</label>
+                                <input type="text" class="form-control" id="inputCategoryName" name="inputCategoryName"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputCategoryTypeLabel" class="form-label">Category Type</label>
+                            <input type="text" class="form-control" id="inputCategoryType" name="inputCategoryType"
+                                   required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
