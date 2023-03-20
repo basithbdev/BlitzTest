@@ -43,7 +43,10 @@
                             </div>
 
                             <div class="text-center mt-5">
-                                <button type="submit" class="btn btn-primary">Log In</button>
+                                <a asp-area="" asp-controller="Customer" asp-action="AllProducts">
+                                    <button type="submit" class="btn btn-primary">Log In</button>
+                                </a>
+                          
                                 <p class="pt-2">
                                     Don't have an account? <a asp-area="" asp-controller="SignUp"
                                                               asp-action="SignUp" class="text-decoration-none">Sign Up</a>
