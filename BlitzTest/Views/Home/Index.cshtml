@@ -100,8 +100,10 @@
             </div>
 
             <div class="show-products py-3 ms-4" style="float: left;">
-                <button type="button" class="btn btn-primary">Show all products <i
-                        class="bi bi-arrow-right"></i></button>
+                <a asp-area="" asp-controller="Customer" asp-action="AllProducts">
+                <button type="button" class="btn btn-primary">
+                 Show all products <i class="bi bi-arrow-right"></i></button>
+                </a>
             </div>
 
         </div>
