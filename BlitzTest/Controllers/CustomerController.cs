@@ -13,5 +13,10 @@ namespace BlitzTest.Controllers
         {
             return View();
         }
+
+        public IActionResult Orders()
+        {
+            return View();
+        }
     }
 }
